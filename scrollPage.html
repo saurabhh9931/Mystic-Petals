@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page Slideshow</title>
+    <link rel="stylesheet" href="scroll.css">
+</head>
+<body>
+    <div class="container">
+        <div class="slideshow-container">
+            <div class="slide active">
+                <img src="i1.jpg" alt="Image 1">
+            </div>
+            <div class="slide">
+                <img src="image2.jpg" alt="Image 2">
+            </div>
+            <div class="slide">
+                <img src="image3.jpg" alt="Image 3">
+            </div>
+        </div>
+    </div>
+    <script>
+        let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.classList.remove('active');
+        if (i === index) {
+            slide.classList.add('active');
+        }
+    });
+}
+
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+}
+
+// Automatically change slide every 3 seconds
+setInterval(nextSlide, 3000);
+
+// Initial display
+showSlide(currentSlide);
+
+    </script>
+</body>
+</html>

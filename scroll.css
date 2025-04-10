@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white; /* White background */
+}
+
+.container {
+     position: relative;
+  width: 100%;
+  height: 80vh; /* 80% of the viewport height */
+  overflow: hidden;
+}
+
+.slideshow-container {
+    position: relative;
+  width: 100%;
+  height: 80vh; /* 80% of the viewport height */
+  overflow: hidden; /* Optional: Add border for aesthetics */
+}
+
+.slide {
+    display: none; /* Hide slides by default */
+}
+
+.slide.active {
+    display: block; /* Show active slide */
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
